@@ -10,3 +10,12 @@
 yarn
 ```
 > 如没有`yarn`，请先安装[yarn](https://yarn.bootcss.com/)
+
+## Start
+```js
+npm run dev:weapp // 微信小程序启动
+```
+## Build
+```js
+npm run build:weapp // 微信小程序打包
+```
