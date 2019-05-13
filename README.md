@@ -9,7 +9,7 @@
 ```js
 yarn
 ```
-> 如没有`yarn`，请先安装[yarn](https://yarn.bootcss.com/)
+> 如没有[yarn](https://yarn.bootcss.com/)，请先安装
 
 ## Start
 ```js
