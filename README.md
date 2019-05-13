@@ -1,9 +1,11 @@
 # weather
 使用[Taro](https://taro.aotu.io/)开发的微信小程序
+
 主要功能为查看、搜索地区天气预报
+
 项目中使用到的天气数据来自[和风天气](https://dev.heweather.com/)
 
-###Install
+## Install
 ```js
 yarn
 ```
