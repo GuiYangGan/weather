@@ -3,7 +3,7 @@
 
 主要功能为查看、搜索地区天气预报
 
-项目中使用到的天气数据来自[和风天气](https://dev.heweather.com/)
+项目中使用到的天气数据来自[高德地图-微信小程序SDK](https://lbs.amap.com/api/wx/summary/)
 
 ## Install
 ```js
