@@ -7,8 +7,6 @@ import { View, Text, Image } from '@tarojs/components';
 import { getRequestAjax, errMessage } from '@/utils/withAsync';
 import './index.less';
 
-const amapKey = '4f0637a9697346a488bc63b8714eb9a2';
-
 export default class Index extends Component {
 
   state = {
@@ -76,14 +74,6 @@ export default class Index extends Component {
     const _this = this;
     wx.getSetting({
       success(res) {
-        // if (res.authSetting['scope.userInfo']) {
-        //   wx.getUserInfo({
-        //     success(res) {
-        //       _this.setState({ userInfo: res.userInfo });
-        //       console.log(res.userInfo)
-        //     }
-        //   })
-        // }
         if (!res.authSetting['scope.record']) {
           wx.getLocation({
             type: 'wgs84',
@@ -102,7 +92,6 @@ export default class Index extends Component {
   getWeatherData = res => {
     getRequestAjax( 'https://free-api.heweather.net/s6/weather/now', {
       location: `${res.longitude},${res.latitude}`,
-      // location: '无锡',
       key: '72613825608142b3ae8890a8b98e04fc'
     }).then(({ data }) => {
       console.log(data.HeWeather6[0])
@@ -117,20 +106,6 @@ export default class Index extends Component {
     }).finally(() => {
       wx.hideLoading();
     });
-    // this.map = new amapFile.AMapWX({
-    //   key:amapKey
-    // });
-    // this.map.getWeather({
-    //   success: function(data){
-    //     //成功回调
-    //     console.log(data)
-    //   },
-    //   fail: function(info){
-    //     //失败回调
-    //     console.log(info)
-    //     errMessage(info.errMsg);
-    //   }
-    // });
   };
   render () {
     const {
