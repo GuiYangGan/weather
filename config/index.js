@@ -1,7 +1,7 @@
 const path = require('path');
 
 const config = {
-  projectName: 'myApp',
+  projectName: 'weather',
   date: '2019-5-13',
   designWidth: 750,
   deviceRatio: {
