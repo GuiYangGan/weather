@@ -20,10 +20,17 @@ class App extends Component {
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    permission: {
+      'scope.userLocation': {
+        desc: '获取你的位置信息'
+      }
     }
   }
 
-  componentDidMount () {}
+  componentDidMount () {
+    
+  }
 
   componentDidShow () {}
 
