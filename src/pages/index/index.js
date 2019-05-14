@@ -158,7 +158,7 @@ export default class Index extends Component {
           <Text>
             实况：
             {weatherInfo.cond_code ?
-              <image src={`../../assets/${weatherInfo.cond_code}.png`} />
+              <image src={`../../img/${weatherInfo.cond_code}.png`} />
               : null
             }
             {weatherInfo.cond_txt}
