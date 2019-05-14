@@ -4,8 +4,7 @@
 import Taro, { Component } from '@tarojs/taro';
 import wx from '@tarojs/taro-weapp';
 import { View, Text, Image } from '@tarojs/components';
-import { getRequestAjax, errMessage } from '../../utils/withAsync';
-import amapFile from '../../libs/amap-wx';
+import { getRequestAjax, errMessage } from '@/utils/withAsync';
 import './index.less';
 
 const amapKey = '4f0637a9697346a488bc63b8714eb9a2';
@@ -133,12 +132,10 @@ export default class Index extends Component {
     //   }
     // });
   };
-
   render () {
     const {
       basic, update, weatherInfo
     } = this.state;
-    console.log(weatherInfo.cond_code)
     return (
       <View className='index'>
         <View className='user'>
@@ -155,14 +152,18 @@ export default class Index extends Component {
         </View>
         <View className='info'>
           <Text>温度：{weatherInfo.tmp}℃</Text>
-          <Text>
-            实况：
+          <View className="hasImg">
+            <Text>
+              实况：
+              {weatherInfo.cond_txt}
+            </Text>
             {weatherInfo.cond_code ?
-              <image src={`../../img/${weatherInfo.cond_code}.png`} />
+              <Image
+                className="img"
+                src={`../../assets/${weatherInfo.cond_code}.png`} />
               : null
             }
-            {weatherInfo.cond_txt}
-          </Text>
+          </View>
           <Text>风向：{weatherInfo.wind_dir}</Text>
           <Text>风力：{weatherInfo.wind_sc}</Text>
           <Text>风速：{weatherInfo.wind_spd}公里/小时</Text>

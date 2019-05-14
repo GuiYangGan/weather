@@ -1,3 +1,5 @@
+const path = require('path');
+
 const config = {
   projectName: 'myApp',
   date: '2019-5-13',
@@ -26,8 +28,15 @@ const config = {
   },
   defineConstants: {
   },
+  alias: {
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+  },
   copy: {
     patterns: [
+      {
+        from: 'src/assets',
+        to: 'dist/assets'
+      }
     ],
     options: {
     }
